@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo tên ngẫu nhiên theo cặp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label, textarea, input, button, select {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tạo tên ngẫu nhiên theo cặp</h1>
+    <label for="number">Số lượng muốn tạo:</label>
+    <input type="number" id="number" placeholder="Nhập số lượng" value="10">
+    <label for="names">Kết quả:</label>
+    <textarea id="names">
+1. Anh  
+2. Linh  
+3. Trang  
+4. Thao  
+5. Huy  
+6. Ngoc  
+7. Phuong  
+8. Tuan  
+9. Huyen  
+10. Huong  
+11. Nhi  
+12. Ha  
+13. Ngan  
+14. Hang  
+15. Hieu  
+16. Vy  
+17. Dat  
+18. Nam  
+19. Quynh  
+20. Hien  
+21. Hoang  
+22. Minh  
+23. Thu  
+24. Yen  
+25. Nhung  
+26. Duc  
+27. Dung  
+28. Mai  
+29. Duy  
+30. Long  
+31. Son  
+32. Hung  
+33. Van  
+34. Bao  
+35. Thanh  
+36. Thuy  
+37. Cuong  
+38. Nhu  
+39. Nga  
+40. Phuc  
+41. Trung  
+42. My  
+43. Hanh  
+44. Hai  
+45. Thang  
+46. Tung  
+47. Duyen  
+48. Uyen  
+49. Quan  
+50. Han  
+51. Giang  
+52. Khang  
+53. Hoa  
+54. Tram  
+55. Tien  
+56. Quang  
+57. Lan  
+58. Trinh  
+59. Khoa  
+60. Ly  
+61. Khanh  
+62. Oanh  
+63. Vu  
+64. Chi  
+65. Quyen  
+66. Phong  
+67. Truong  
+68. Thuong  
+69. Tu  
+70. Tai  
+71. Hong  
+72. Loan  
+73. Tam  
+74. Thinh  
+75. Nguyen  
+76. Duong  
+77. Phat  
+78. Toan  
+79. Vinh  
+80. Nghia  
+81. An  
+82. Manh  
+83. Lam  
+84. Binh  
+85. Tran  
+86. Nhan  
+87. Kien  
+88. Viet  
+89. Hue  
+90. Chau  
+91. Truc  
+92. Thai  
+93. Lien  
+94. Loc  
+95. Phu  
+96. Nguyet  
+97. Thien  
+98. Tri  
+99. Tuyen  
+100. Tan  
+101. Khoi  
+102. Tuyet  
+103. Kiet  
+104. Vi  
+105. Sang  
+106. Hoai  
+107. Hiep  
+108. Nhat  
+109. Xuan  
+110. Thuan  
+111. Cong  
+112. Diem  
+113. Tham  
+114. Y  
+115. Hau  
+116. Hao  
+117. Quy  
+118. Nghi  
+119. Dang  
+120. Trong  
+121. Chien  
+122. Luan  
+123. Le  
+124. Kieu  
+125. Thy  
+126. Bich  
+127. Phuoc  
+128. Thi  
+129. Thong  
+130. Khai  
+131. Quoc  
+132. Tin  
+133. Dai  
+134. Dong  
+135. Thoa  
+136. Dao  
+137. Tra  
+138. Vuong  
+139. Loi  
+140. Chung  
+141. Danh  
+142. Dieu  
+143. Phung  
+144. Diep  
+145. Kim  
+146. Cuc  
+147. Tho  
+148. Suong  
+149. Hoan  
+150. Thom  
+151. Chinh  
+152. Phi  
+153. Quyet  
+154. Lieu  
+155. Na  
+156. Canh  
+157. Khiem  
+158. Kha  
+159. Bang  
+160. Luc  
+161. Bach  
+162. Dinh  
+163. Tuong  
+164. Nhut  
+165. Mi  
+166. Luong  
+167. Khuong  
+168. Luyen  
+169. Bac  
+170. Chuong  
+171. Tuoi  
+172. Doan  
+173. Nie  
+174. Dan  
+175. Huan  
+176. Thuc  
+177. Mo  
+178. Thach  
+179. Ninh  
+180. Ky  
+181. Tinh  
+182. Men  
+183. Huu  
+184. Nhien  
+185. The  
+186. Khuyen  
+187. Trieu  
+188. Liem  
+189. Huynh  
+190. Sy  
+191. Triet  
+192. Man  
+193. Xuyen  
+194. Cham  
+195. Sinh  
+196. Lanh  
+197. Sen  
+198. Nha  
+199. Ngoan  
+200. Ai  
+201. Dien  
+202. Diu  
+203. Khue  
+204. Vui  
+205. Nuong  
+206. Giap  
+207. Gam  
+208. Do  
+209. Qui  
+210. Lap  
+211. Nu  
+212. Giao  
+213. Hop  
+214. Cam  
+215. Giau  
+216. Tiep  
+217. Doanh  
+218. Hoc  
+219. Luu  
+220. Bien  
+221. Du  
+222. Lua  
+223. Ni  
+224. Chang  
+225. Thoai  
+226. Chuc  
+227. Que  
+228. Ngat  
+229. Phap  
+230. Nghiep  
+231. Hoi  
+232. Toi  
+233. Vien  
+234. Nham  
+235. Duoc  
+236. Than  
+237. Ny  
+238. May  
+239. Luat  
+240. Be  
+241. Nhai  
+242. Chuyen  
+243. Lai  
+244. Ba  
+245. Tue  
+246. Cao  
+247. Chanh  
+248. Gia  
+249. Sa  
+250. Si  
+251. Phan  
+252. Nghiem  
+253. Su  
+254. Thuat  
+255. Thin  
+256. Truyen  
+257. Duan  
+258. Mui  
+259. Hy  
+260. Xoan  
+261. Tay  
+262. Thiet  
+263. Em  
+264. San  
+265. Theu  
+266. Thieu  
+267. Di  
+268. Tao  
+269. Them  
+270. Uy  
+271. Thuyen  
+272. Sam  
+273. Nhon  
+274. Ut  
+275. Lich  
+276. Ho  
+277. Bo  
+278. Ton  
+279. Can  
+280. Sao  
+281. Thuyet  
+282. Hoat  
+283. Mung  
+284. Bong  
+285. Xinh  
+286. Ca  
+287. Thoan  
+288. Chan  
+289. Mien  
+290. Sau  
+291. Dep  
+292. Pha  
+293. No  
+294. Nhanh  
+295. Muoi  
+296. Le
+    </textarea>
+
+    <label for="removeAccents">Loại bỏ dấu tiếng việt nếu có:</label>
+    <select id="removeAccents">
+        <option value="no">Không</option>
+        <option value="yes">Có</option>
+    </select>
+
+    <button id="generate">Tạo</button>
+    <button id="copy">Sao chép</button>
+    <button id="download">Tải kết quả</button>
+  
+    <textarea id="output" readonly></textarea>
+
+    <script>
+        function removeVietnameseAccents(str, option = 0) {
+	var from, to;
+  // remove all marks (Latin alphabet)
+	if(option === 0){
+		from = "àáãảạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệđùúủũụưừứửữựòóỏõọôồốổỗộơờớởỡợìíỉĩịäëïîöüûñçýỳỹỵỷ",
+                to   = "aaaaaaaaaaaaaaaaaeeeeeeeeeeeduuuuuuuuuuuoooooooooooooooooiiiiiaeiiouuncyyyyy";
+	}
+
+  
+	if(option === 1){
+		from = "àáãảạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệđùúủũụưừứửữựòóỏõọôồốổỗộơờớởỡợìíỉĩịäëïîöüûñçýỳỹỵỷ",
+		to   = "aaaaaăăăăăăââââââeeeeeêêêêêêđuuuuuưưưưưưoooooôôôôôôơơơơơơiiiiiaeiiouuncyyyyy";
+	}
+      
+
+          for (var i=0, l=from.length ; i < l ; i++) {
+    str = str.replace(RegExp(from[i], "gi"), to[i]);
+  }
+
+  str = str.toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9\-]/g, '-')
+        .replace(/-+/g, '-');
+
+  return str;
+            }
+        }
+      
+        function getRandomPairs(names, n) {
+            const pairs = new Set();
+            const totalNames = names.length;
+
+            while (pairs.size < n && pairs.size < totalNames * (totalNames - 1)) {
+                const name1 = names[Math.floor(Math.random() * totalNames)];
+                const name2 = names[Math.floor(Math.random() * totalNames)];
+                if (name1 !== name2) {
+                    const pair = `${name1} ${name2}`;
+                    const reversePair = `${name2} ${name1}`;
+                    if (!pairs.has(pair) && !pairs.has(reversePair)) {
+                        pairs.add(pair);
+                    }
+                }
+            }
+            return Array.from(pairs);
+        }
+
+        document.getElementById('generate').addEventListener('click', () => {
+            const n = parseInt(document.getElementById('number').value) || 10;
+            const namesInput = document.getElementById('names').value.trim().split('\n').filter(name => name);
+            const removeAccents = document.getElementById('removeAccents').value === 'yes';
+
+            const names = removeAccents ? namesInput.map(removeVietnameseAccents) : namesInput;
+
+            const pairs = getRandomPairs(names, n);
+            document.getElementById('output').value = pairs.join('\n');
+        });
+
+        document.getElementById('copy').addEventListener('click', () => {
+            const output = document.getElementById('output');
+            output.select();
+            document.execCommand('copy');
+            alert('Copied to clipboard!');
+        });
+
+        document.getElementById('download').addEventListener('click', () => {
+            const data = document.getElementById('output').value;
+            const blob = new Blob([data], { type: 'text/plain' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'name_pairs.txt';
+            a.click();
+        });
+    </script>
+</body>
+</html>
