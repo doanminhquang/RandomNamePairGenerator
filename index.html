@@ -8,8 +8,10 @@
       body {
         font-family: Arial, sans-serif;
         margin: 20px;
+        line-height: 1.6;
+        color: #333;
       }
-
+    
       label,
       textarea,
       input,
@@ -19,14 +21,45 @@
         margin-bottom: 10px;
         width: 100%;
       }
-
+    
       textarea {
         height: 150px;
+        resize: none;
       }
-
+    
       button {
         padding: 10px;
         cursor: pointer;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+    
+      #output {
+        background-color: #f8f9fa;
+        border: 1px solid #ced4da;
+        padding: 10px;
+        border-radius: 4px;
+      }
+    
+      h1 {
+        color: #343a40;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    
+      @media (max-width: 600px) {
+        textarea,
+        input,
+        button,
+        select {
+          width: 100%;
+        }
       }
     </style>
   </head>
