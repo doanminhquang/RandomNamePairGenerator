@@ -343,20 +343,8 @@ Le
     <button id="download">Tải kết quả</button>
     <textarea id="output" readonly></textarea>
     <script>
-      function removeVietnameseAccents(str, option = 0) {
-        var from, to;
-        if (option === 0) {
-          from = "àáãảạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệđùúủũụưừứửữựòóỏõọôồốổỗộơờớởỡợìíỉĩịäëïîöüûñçýỳỹỵỷ",
-            to = "aaaaaaaaaaaaaaaaaeeeeeeeeeeeduuuuuuuuuuuoooooooooooooooooiiiiiaeiiouuncyyyyy";
-        }
-        if (option === 1) {
-          from = "àáãảạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệđùúủũụưừứửữựòóỏõọôồốổỗộơờớởỡợìíỉĩịäëïîöüûñçýỳỹỵỷ",
-            to = "aaaaaăăăăăăââââââeeeeeêêêêêêđuuuuuưưưưưưoooooôôôôôôơơơơơơiiiiiaeiiouuncyyyyy";
-        }
-        for (var i = 0, l = from.length; i < l; i++) {
-          str = str.replace(RegExp(from[i], "gi"), to[i]);
-        }
-        return str;      
+      function nonAccentVietnamese(n) {
+        return (n = (n = (n = (n = (n = (n = (n = (n = (n = n.toLowerCase()).replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a")).replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e")).replace(/ì|í|ị|ỉ|ĩ/g, "i")).replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o")).replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u")).replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y")).replace(/đ/g, "d")).replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, "")).replace(/\u02C6|\u0306|\u031B/g, "");
       }
 
       function getRandomPairs(names, n) {
@@ -379,7 +367,7 @@ Le
         const n = parseInt(document.getElementById('number').value) || 10;
         const namesInput = document.getElementById('names').value.trim().split('\n').filter(name => name);
         const removeAccents = document.getElementById('removeAccents').value === 'yes';
-        const names = removeAccents ? namesInput.map(removeVietnameseAccents) : namesInput;
+        const names = removeAccents ? namesInput.map(nonAccentVietnamese) : namesInput;
         const pairs = getRandomPairs(names, n);
         document.getElementById('output').value = pairs.join('\n');
       });
