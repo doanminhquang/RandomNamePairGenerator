@@ -10,49 +10,70 @@
         margin: 20px;
         line-height: 1.6;
         color: #333;
+        background-color: #f4f4f9;
       }
-    
-      label,
+
+      label {
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+      }
+
       textarea,
       input,
       button,
       select {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        box-sizing: border-box;
       }
-    
+
       textarea {
         height: 150px;
-        resize: none;
+        resize: vertical;
       }
-    
+
       button {
-        padding: 10px;
+        padding: 10px 15px;
         cursor: pointer;
         background-color: #007BFF;
         color: white;
         border: none;
         border-radius: 4px;
+        font-weight: bold;
       }
-      
+
       button:hover {
         background-color: #0056b3;
       }
-    
+
       #output {
         background-color: #f8f9fa;
         border: 1px solid #ced4da;
         padding: 10px;
         border-radius: 4px;
       }
-    
+
       h1 {
         color: #343a40;
         text-align: center;
         margin-bottom: 20px;
       }
-    
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
       @media (max-width: 600px) {
         textarea,
         input,
@@ -64,326 +85,63 @@
     </style>
   </head>
   <body>
-    <h1>Tạo tên ngẫu nhiên theo cặp</h1>
-    <label for="number">Số lượng muốn tạo:</label>
-    <input type="number" id="number" placeholder="Nhập số lượng" value="10">
-    <label for="names">Dữ liệu nguồn:</label>
-    <textarea id="names">
-Anh  
-Linh  
-Trang  
-Thao  
-Huy  
-Ngoc  
-Phuong  
-Tuan  
-Huyen  
-Huong  
-Nhi  
-Ha  
-Ngan  
-Hang  
-Hieu  
-Vy  
-Dat  
-Nam  
-Quynh  
-Hien  
-Hoang  
-Minh  
-Thu  
-Yen  
-Nhung  
-Duc  
-Dung  
-Mai  
-Duy  
-Long  
-Son  
-Hung  
-Van  
-Bao  
-Thanh  
-Thuy  
-Cuong  
-Nhu  
-Nga  
-Phuc  
-Trung  
-My  
-Hanh  
-Hai  
-Thang  
-Tung  
-Duyen  
-Uyen  
-Quan  
-Han  
-Giang  
-Khang  
-Hoa  
-Tram  
-Tien  
-Quang  
-Lan  
-Trinh  
-Khoa  
-Ly  
-Khanh  
-Oanh  
-Vu  
-Chi  
-Quyen  
-Phong  
-Truong  
-Thuong  
-Tu  
-Tai  
-Hong  
-Loan  
-Tam  
-Thinh  
-Nguyen  
-Duong  
-Phat  
-Toan  
-Vinh  
-Nghia  
-An  
-Manh  
-Lam  
-Binh  
-Tran  
-Nhan  
-Kien  
-Viet  
-Hue  
-Chau  
-Truc  
-Thai  
-Lien  
-Loc  
-Phu  
-Nguyet  
-Thien  
-Tri  
-Tuyen  
-Tan  
-Khoi  
-Tuyet  
-Kiet  
-Vi  
-Sang  
-Hoai  
-Hiep  
-Nhat  
-Xuan  
-Thuan  
-Cong  
-Diem  
-Tham  
-Y  
-Hau  
-Hao  
-Quy  
-Nghi  
-Dang  
-Trong  
-Chien  
-Luan  
-Le  
-Kieu  
-Thy  
-Bich  
-Phuoc  
-Thi  
-Thong  
-Khai  
-Quoc  
-Tin  
-Dai  
-Dong  
-Thoa  
-Dao  
-Tra  
-Vuong  
-Loi  
-Chung  
-Danh  
-Dieu  
-Phung  
-Diep  
-Kim  
-Cuc  
-Tho  
-Suong  
-Hoan  
-Thom  
-Chinh  
-Phi  
-Quyet  
-Lieu  
-Na  
-Canh  
-Khiem  
-Kha  
-Bang  
-Luc  
-Bach  
-Dinh  
-Tuong  
-Nhut  
-Mi  
-Luong  
-Khuong  
-Luyen  
-Bac  
-Chuong  
-Tuoi  
-Doan  
-Nie  
-Dan  
-Huan  
-Thuc  
-Mo  
-Thach  
-Ninh  
-Ky  
-Tinh  
-Men  
-Huu  
-Nhien  
-The  
-Khuyen  
-Trieu  
-Liem  
-Huynh  
-Sy  
-Triet  
-Man  
-Xuyen  
-Cham  
-Sinh  
-Lanh  
-Sen  
-Nha  
-Ngoan  
-Ai  
-Dien  
-Diu  
-Khue  
-Vui  
-Nuong  
-Giap  
-Gam  
-Do  
-Qui  
-Lap  
-Nu  
-Giao  
-Hop  
-Cam  
-Giau  
-Tiep  
-Doanh  
-Hoc  
-Luu  
-Bien  
-Du  
-Lua  
-Ni  
-Chang  
-Thoai  
-Chuc  
-Que  
-Ngat  
-Phap  
-Nghiep  
-Hoi  
-Toi  
-Vien  
-Nham  
-Duoc  
-Than  
-Ny  
-May  
-Luat  
-Be  
-Nhai  
-Chuyen  
-Lai  
-Ba  
-Tue  
-Cao  
-Chanh  
-Gia  
-Sa  
-Si  
-Phan  
-Nghiem  
-Su  
-Thuat  
-Thin  
-Truyen  
-Duan  
-Mui  
-Hy  
-Xoan  
-Tay  
-Thiet  
-Em  
-San  
-Theu  
-Thieu  
-Di  
-Tao  
-Them  
-Uy  
-Thuyen  
-Sam  
-Nhon  
-Ut  
-Lich  
-Ho  
-Bo  
-Ton  
-Can  
-Sao  
-Thuyet  
-Hoat  
-Mung  
-Bong  
-Xinh  
-Ca  
-Thoan  
-Chan  
-Mien  
-Sau  
-Dep  
-Pha  
-No  
-Nhanh  
-Muoi  
-Le
-    </textarea>
-    <label for="removeAccents">Loại bỏ dấu tiếng việt nếu có:</label>
-    <select id="removeAccents">
-      <option value="no">Không</option>
-      <option value="yes">Có</option>
-    </select>
-    <button id="generate">Tạo</button>
-    <button id="copy">Sao chép</button>
-    <button id="download">Tải kết quả</button>
-    <textarea id="output" readonly></textarea>
+    <div class="container">
+      <h1>Tạo tên ngẫu nhiên theo cặp</h1>
+      <label for="number">Số lượng muốn tạo:</label>
+      <input type="number" id="number" placeholder="Nhập số lượng" value="10">
+
+      <label for="names">Dữ liệu nguồn:</label>
+      <textarea id="names">
+Anh
+Linh
+Trang
+Thao
+Huy
+Ngoc
+Phuong
+Tuan
+Huyen
+Huong
+      </textarea>
+
+      <label for="removeAccents">Loại bỏ dấu tiếng Việt nếu có:</label>
+      <select id="removeAccents">
+        <option value="no">Không</option>
+        <option value="yes">Có</option>
+      </select>
+
+      <button id="generate">Tạo</button>
+      <button id="copy">Sao chép</button>
+      <button id="download">Tải kết quả</button>
+
+      <textarea id="output" readonly></textarea>
+    </div>
+
     <script>
-      function nonAccentVietnamese(n) {
-        return (n = (n = (n = (n = (n = (n = (n = (n = (n = n.toLowerCase()).replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a")).replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e")).replace(/ì|í|ị|ỉ|ĩ/g, "i")).replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o")).replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u")).replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y")).replace(/đ/g, "d")).replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, "")).replace(/\u02C6|\u0306|\u031B/g, "");
+      function nonAccentVietnamese(str) {
+        return str
+          .toLowerCase()
+          .replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a")
+          .replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e")
+          .replace(/ì|í|ị|ỉ|ĩ/g, "i")
+          .replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o")
+          .replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u")
+          .replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y")
+          .replace(/đ/g, "d")
+          .replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, "")
+          .replace(/\u02C6|\u0306|\u031B/g, "");
       }
 
       function getRandomPairs(names, n) {
         const pairs = new Set();
         const totalNames = names.length;
-        while (pairs.size < n && pairs.size < totalNames * (totalNames - 1)) {
+
+        if (n > totalNames * (totalNames - 1) / 2) {
+          alert("Số lượng yêu cầu vượt quá số cặp có thể!");
+          return [];
+        }
+
+        while (pairs.size < n) {
           const name1 = names[Math.floor(Math.random() * totalNames)];
           const name2 = names[Math.floor(Math.random() * totalNames)];
           if (name1 !== name2) {
@@ -394,30 +152,33 @@ Le
             }
           }
         }
+
         return Array.from(pairs);
       }
-      document.getElementById('generate').addEventListener('click', () => {
-        const n = parseInt(document.getElementById('number').value) || 10;
-        const namesInput = document.getElementById('names').value.trim().split('\n').filter(name => name);
-        const removeAccents = document.getElementById('removeAccents').value === 'yes';
+
+      document.getElementById("generate").addEventListener("click", () => {
+        const n = parseInt(document.getElementById("number").value) || 10;
+        const namesInput = document.getElementById("names").value.trim().split("\n").filter(Boolean);
+        const removeAccents = document.getElementById("removeAccents").value === "yes";
         const names = removeAccents ? namesInput.map(nonAccentVietnamese) : namesInput;
+
         const pairs = getRandomPairs(names, n);
-        document.getElementById('output').value = pairs.join('\n');
+        document.getElementById("output").value = pairs.join("\n");
       });
-      document.getElementById('copy').addEventListener('click', () => {
-        const output = document.getElementById('output');
+
+      document.getElementById("copy").addEventListener("click", () => {
+        const output = document.getElementById("output");
         output.select();
-        document.execCommand('copy');
-        alert('Copied to clipboard!');
+        document.execCommand("copy");
+        alert("Copied to clipboard!");
       });
-      document.getElementById('download').addEventListener('click', () => {
-        const data = document.getElementById('output').value;
-        const blob = new Blob([data], {
-          type: 'text/plain'
-        });
-        const a = document.createElement('a');
+
+      document.getElementById("download").addEventListener("click", () => {
+        const data = document.getElementById("output").value;
+        const blob = new Blob([data], { type: "text/plain" });
+        const a = document.createElement("a");
         a.href = URL.createObjectURL(blob);
-        a.download = 'name_pairs.txt';
+        a.download = "name_pairs.txt";
         a.click();
       });
     </script>
