@@ -92,6 +92,15 @@
           width: 100%;
         }
       }
+
+      textarea {
+        resize: none;
+      }
+      
+      textarea:focus,
+      input:focus {
+        outline:none;
+      }
     </style>
   </head>
   <body>
@@ -108,7 +117,7 @@
       <label for="removeAccents">Loại bỏ dấu tiếng Việt nếu có:</label>
       <select id="removeAccents">
         <option value="no">Không</option>
-        <option value="yes">Có</option>
+        <option value="yes" selected>Có</option>
       </select>
 
       <button id="generate">Tạo</button>
