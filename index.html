@@ -103,16 +103,6 @@
 
       <label for="names">Dữ liệu nguồn:</label>
       <textarea id="names">
-Anh
-Linh
-Trang
-Thao
-Huy
-Ngoc
-Phuong
-Tuan
-Huyen
-Huong
       </textarea>
 
       <label for="removeAccents">Loại bỏ dấu tiếng Việt nếu có:</label>
@@ -129,6 +119,11 @@ Huong
     </div>
 
     <script>
+      var data = ["Anh", "Linh", "Trang", "Thao", "Huy", "Ngoc", "Phuong", "Tuan", "Huyen", "Huong", "Nhi", "Ha", "Ngan", "Hang", "Hieu", "Vy", "Dat", "Nam", "Quynh", "Hien", "Hoang", "Minh", "Thu", "Yen", "Nhung", "Duc", "Dung", "Mai", "Duy", "Long", "Son", "Hung", "Van", "Bao", "Thanh", "Thuy", "Cuong", "Nhu", "Nga", "Phuc", "Trung", "My", "Hanh", "Hai", "Thang", "Tung", "Duyen", "Uyen", "Quan", "Han", "Giang", "Khang", "Hoa", "Tram", "Tien", "Quang", "Lan", "Trinh", "Khoa", "Ly", "Khanh", "Oanh", "Vu", "Chi", "Quyen", "Phong", "Truong", "Thuong", "Tu", "Tai", "Hong", "Loan", "Tam", "Thinh", "Nguyen", "Duong", "Phat", "Toan", "Vinh", "Nghia", "An", "Manh", "Lam", "Binh", "Tran", "Nhan", "Kien", "Viet", "Hue", "Chau", "Truc", "Thai", "Lien", "Loc", "Phu", "Nguyet", "Thien", "Tri", "Tuyen", "Tan", "Khoi", "Tuyet", "Kiet", "Vi", "Sang", "Hoai", "Hiep", "Nhat", "Xuan", "Thuan", "Cong", "Diem", "Tham", "Y", "Hau", "Hao", "Quy", "Nghi", "Dang", "Trong", "Chien", "Luan", "Le", "Kieu", "Thy", "Bich", "Phuoc", "Thi", "Thong", "Khai", "Quoc", "Tin", "Dai", "Dong", "Thoa", "Dao", "Tra", "Vuong", "Loi", "Chung", "Danh", "Dieu", "Phung", "Diep", "Kim", "Cuc", "Tho", "Suong", "Hoan", "Thom", "Chinh", "Phi", "Quyet", "Lieu", "Na", "Canh", "Khiem", "Kha", "Bang", "Luc", "Bach", "Dinh", "Tuong", "Nhut", "Mi", "Luong", "Khuong", "Luyen", "Bac", "Chuong", "Tuoi", "Doan", "Nie", "Dan", "Huan", "Thuc", "Mo", "Thach", "Ninh", "Ky", "Tinh", "Men", "Huu", "Nhien", "The", "Khuyen", "Trieu", "Liem", "Huynh", "Sy", "Triet", "Man", "Xuyen", "Cham", "Sinh", "Lanh", "Sen", "Nha", "Ngoan", "Ai", "Dien", "Diu", "Khue", "Vui", "Nuong", "Giap", "Gam", "Do", "Qui", "Lap", "Nu", "Giao", "Hop", "Cam", "Giau", "Tiep", "Doanh", "Hoc", "Luu", "Bien", "Du", "Lua", "Ni", "Chang", "Thoai", "Chuc", "Que", "Ngat", "Phap", "Nghiep", "Hoi", "Toi", "Vien", "Nham", "Duoc", "Than", "Ny", "May", "Luat", "Be", "Nhai", "Chuyen", "Lai", "Ba", "Tue", "Cao", "Chanh", "Gia", "Sa", "Si", "Phan", "Nghiem", "Su", "Thuat", "Thin", "Truyen", "Duan", "Mui", "Hy", "Xoan", "Tay", "Thiet", "Em", "San", "Theu", "Thieu", "Di", "Tao", "Them", "Uy", "Thuyen", "Sam", "Nhon", "Ut", "Lich", "Ho", "Bo", "Ton", "Can", "Sao", "Thuyet", "Hoat", "Mung", "Bong", "Xinh", "Ca", "Thoan", "Chan", "Mien", "Sau", "Dep", "Pha", "No", "Nhanh", "Muoi", "Le"];
+      
+      const textarea = document.getElementById("names");
+      textarea.value = data.join("\n");
+      
       function nonAccentVietnamese(str) {
         return str
           .toLowerCase()
@@ -173,7 +168,7 @@ Huong
         alertDiv.style.display = "none";
 
         const n = parseInt(document.getElementById("number").value) || 10;
-        const namesInput = document.getElementById("names").value.trim().split("\n").filter(Boolean);
+        const namesInput = textarea.value.trim().split("\n").filter(Boolean);
         const removeAccents = document.getElementById("removeAccents").value === "yes";
         const names = removeAccents ? namesInput.map(nonAccentVietnamese) : namesInput;
 
